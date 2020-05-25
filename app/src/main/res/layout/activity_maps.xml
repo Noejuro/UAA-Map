@@ -14,16 +14,5 @@
         android:layout_height="match_parent"
         tools:context=".Maps" />
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        map:layout_anchorGravity="bottom|center"
-        map:navigationIcon="@drawable/menu"
-        map:titleTextAppearance="@style/TextAppearance.AppCompat.Large" />
-
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

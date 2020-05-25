@@ -42,6 +42,14 @@ public class Maps extends FragmentActivity implements OnMapReadyCallback {
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
+        mMap.getUiSettings().setCompassEnabled(false);
+
+        mMap.getUiSettings().setZoomControlsEnabled(false);
+
+        mMap.getUiSettings().setMapToolbarEnabled(false);
+
+
+
         MapStyleOptions mapStyleOptions=MapStyleOptions.loadRawResourceStyle(this,R.raw.google_style);
         googleMap.setMapStyle(mapStyleOptions);
 
