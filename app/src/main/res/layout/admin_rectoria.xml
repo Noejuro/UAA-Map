@@ -1,6 +1,199 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="411dp"
+        android:layout_height="98dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/rectoria" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="1dp"
+        android:background="#002554"
+        android:fontFamily="sans-serif-black"
+        android:shadowColor="#002554"
+        android:text=" Rectoría"
+        android:textAlignment="textStart"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#e6e6e6"
+        android:fontFamily="sans-serif-thin"
+        android:text="¿Qué puedo hacer aquí?"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="554dp"
+        android:layout_marginStart="1dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#4d4d4d"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Piso 1: Becas y Deportes"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies venenatis leo sed varius. Nulla nisi risus, lacinia at lacinia at, mollis id tortor. Proin ullamcorper vulputate nisl, vel efficitur arcu sollicitudin a. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras interdum velit ut ornare laoreet. " />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#4d4d4d"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Piso 2: Créditos Educativos"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies venenatis leo sed varius. Nulla nisi risus, lacinia at lacinia at, mollis id tortor. Proin ullamcorper vulputate nisl, vel efficitur arcu sollicitudin a. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras interdum velit ut ornare laoreet. Pellentesque vitae tortor ut tellus fermentum venenatis nec vel enim. Nulla eget eros facilisis, sollicitudin turpis et, ultricies leo. Integer vitae facilisis augue. Etiam vestibulum commodo efficitur. Integer ut ipsum suscipit odio commodo dictum quis vel massa. Pellentesque vulputate euismod odio, eu congue sem. Vestibulum quis pretium neque, ac molestie nibh." />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#4d4d4d"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Piso 3: Transparencia"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies venenatis leo sed varius. Nulla nisi risus, lacinia at lacinia at, mollis id tortor. Proin ullamcorper vulputate nisl, vel efficitur arcu sollicitudin a. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras interdum velit ut ornare laoreet. " />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#4d4d4d"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Piso 4: Programas Académicos"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies venenatis leo sed varius. Nulla nisi risus, lacinia at lacinia at, mollis id tortor. Proin ullamcorper vulputate nisl, vel efficitur arcu sollicitudin a. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras interdum velit ut ornare laoreet. Pellentesque vitae tortor ut tellus fermentum venenatis nec vel enim. Nulla eget eros facilisis, sollicitudin turpis et, ultricies leo. Integer vitae facilisis augue. Etiam vestibulum commodo efficitur. Integer ut ipsum suscipit odio commodo dictum quis vel massa. Pellentesque vulputate euismod odio, eu congue sem. Vestibulum quis pretium neque, ac molestie nibh." />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#4d4d4d"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Piso 5: Junta directiva"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies venenatis leo sed varius. Nulla nisi risus, lacinia at lacinia at, mollis id tortor. Proin ullamcorper vulputate nisl, vel efficitur arcu sollicitudin a. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras interdum velit ut ornare laoreet. " />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#4d4d4d"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Piso 6: Movilidad"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies venenatis leo sed varius. Nulla nisi risus, lacinia at lacinia at, mollis id tortor. Proin ullamcorper vulputate nisl, vel efficitur arcu sollicitudin a. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras interdum velit ut ornare laoreet. Pellentesque vitae tortor ut tellus fermentum venenatis nec vel enim. Nulla eget eros facilisis, sollicitudin turpis et, ultricies leo. Integer vitae facilisis augue. Etiam vestibulum commodo efficitur. Integer ut ipsum suscipit odio commodo dictum quis vel massa. Pellentesque vulputate euismod odio, eu congue sem. Vestibulum quis pretium neque, ac molestie nibh." />
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#4d4d4d"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Piso 1: Becas y Deportes"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies venenatis leo sed varius. Nulla nisi risus, lacinia at lacinia at, mollis id tortor. Proin ullamcorper vulputate nisl, vel efficitur arcu sollicitudin a. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras interdum velit ut ornare laoreet. " />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#4d4d4d"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Piso 1: Becas y Deportes"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies venenatis leo sed varius. Nulla nisi risus, lacinia at lacinia at, mollis id tortor. Proin ullamcorper vulputate nisl, vel efficitur arcu sollicitudin a. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras interdum velit ut ornare laoreet. Pellentesque vitae tortor ut tellus fermentum venenatis nec vel enim. Nulla eget eros facilisis, sollicitudin turpis et, ultricies leo. Integer vitae facilisis augue. Etiam vestibulum commodo efficitur. Integer ut ipsum suscipit odio commodo dictum quis vel massa. Pellentesque vulputate euismod odio, eu congue sem. Vestibulum quis pretium neque, ac molestie nibh." />
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
