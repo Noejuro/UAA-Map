@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="411dp"
+        android:layout_height="98dp"
+        android:contentDescription="@string/todo"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/rectoria" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="1dp"
+        android:background="#002554"
+        android:fontFamily="sans-serif-black"
+        android:shadowColor="#002554"
+        android:text="@string/rector_a"
+        android:textAlignment="textStart"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#e6e6e6"
+        android:fontFamily="sans-serif-thin"
+        android:text="@string/qu_puedo_hacer_aqu"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="176dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#4d4d4d"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="@string/piso_1_becas_y_deportes"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_phasellus_ultricies_venenatis_leo_sed_varius_nulla_nisi_risus_lacinia_at_lacinia_at_mollis_id_tortor_proin_ullamcorper_vulputate_nisl_vel_efficitur_arcu_sollicitudin_a_class_aptent_taciti_sociosqu_ad_litora_torquent_per_conubia_nostra_per_inceptos_himenaeos_cras_interdum_velit_ut_ornare_laoreet_pellentesque_vitae_tortor_ut_tellus_fermentum_venenatis_nec_vel_enim_nulla_eget_eros_facilisis_sollicitudin_turpis_et_ultricies_leo_integer_vitae_facilisis_augue_etiam_vestibulum_commodo_efficitur_integer_ut_ipsum_suscipit_odio_commodo_dictum_quis_vel_massa_pellentesque_vulputate_euismod_odio_eu_congue_sem_vestibulum_quis_pretium_neque_ac_molestie_nibh" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#4d4d4d"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="@string/piso_2_cr_ditos_educativos"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_phasellus_ultricies_venenatis_leo_sed_varius_nulla_nisi_risus_lacinia_at_lacinia_at_mollis_id_tortor_proin_ullamcorper_vulputate_nisl_vel_efficitur_arcu_sollicitudin_a_class_aptent_taciti_sociosqu_ad_litora_torquent_per_conubia_nostra_per_inceptos_himenaeos_cras_interdum_velit_ut_ornare_laoreet_pellentesque_vitae_tortor_ut_tellus_fermentum_venenatis_nec_vel_enim_nulla_eget_eros_facilisis_sollicitudin_turpis_et_ultricies_leo_integer_vitae_facilisis_augue_etiam_vestibulum_commodo_efficitur_integer_ut_ipsum_suscipit_odio_commodo_dictum_quis_vel_massa_pellentesque_vulputate_euismod_odio_eu_congue_sem_vestibulum_quis_pretium_neque_ac_molestie_nibh" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#4d4d4d"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="@string/piso_3_transparencia"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_phasellus_ultricies_venenatis_leo_sed_varius_nulla_nisi_risus_lacinia_at_lacinia_at_mollis_id_tortor_proin_ullamcorper_vulputate_nisl_vel_efficitur_arcu_sollicitudin_a_class_aptent_taciti_sociosqu_ad_litora_torquent_per_conubia_nostra_per_inceptos_himenaeos_cras_interdum_velit_ut_ornare_laoreet_pellentesque_vitae_tortor_ut_tellus_fermentum_venenatis_nec_vel_enim_nulla_eget_eros_facilisis_sollicitudin_turpis_et_ultricies_leo_integer_vitae_facilisis_augue_etiam_vestibulum_commodo_efficitur_integer_ut_ipsum_suscipit_odio_commodo_dictum_quis_vel_massa_pellentesque_vulputate_euismod_odio_eu_congue_sem_vestibulum_quis_pretium_neque_ac_molestie_nibh" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#4d4d4d"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="@string/piso_4_programas_acad_micos"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_phasellus_ultricies_venenatis_leo_sed_varius_nulla_nisi_risus_lacinia_at_lacinia_at_mollis_id_tortor_proin_ullamcorper_vulputate_nisl_vel_efficitur_arcu_sollicitudin_a_class_aptent_taciti_sociosqu_ad_litora_torquent_per_conubia_nostra_per_inceptos_himenaeos_cras_interdum_velit_ut_ornare_laoreet_pellentesque_vitae_tortor_ut_tellus_fermentum_venenatis_nec_vel_enim_nulla_eget_eros_facilisis_sollicitudin_turpis_et_ultricies_leo_integer_vitae_facilisis_augue_etiam_vestibulum_commodo_efficitur_integer_ut_ipsum_suscipit_odio_commodo_dictum_quis_vel_massa_pellentesque_vulputate_euismod_odio_eu_congue_sem_vestibulum_quis_pretium_neque_ac_molestie_nibh" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#4d4d4d"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="@string/piso_5_junta_directiva"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_phasellus_ultricies_venenatis_leo_sed_varius_nulla_nisi_risus_lacinia_at_lacinia_at_mollis_id_tortor_proin_ullamcorper_vulputate_nisl_vel_efficitur_arcu_sollicitudin_a_class_aptent_taciti_sociosqu_ad_litora_torquent_per_conubia_nostra_per_inceptos_himenaeos_cras_interdum_velit_ut_ornare_laoreet_pellentesque_vitae_tortor_ut_tellus_fermentum_venenatis_nec_vel_enim_nulla_eget_eros_facilisis_sollicitudin_turpis_et_ultricies_leo_integer_vitae_facilisis_augue_etiam_vestibulum_commodo_efficitur_integer_ut_ipsum_suscipit_odio_commodo_dictum_quis_vel_massa_pellentesque_vulputate_euismod_odio_eu_congue_sem_vestibulum_quis_pretium_neque_ac_molestie_nibh" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#4d4d4d"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="@string/piso_6_movilidad"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_phasellus_ultricies_venenatis_leo_sed_varius_nulla_nisi_risus_lacinia_at_lacinia_at_mollis_id_tortor_proin_ullamcorper_vulputate_nisl_vel_efficitur_arcu_sollicitudin_a_class_aptent_taciti_sociosqu_ad_litora_torquent_per_conubia_nostra_per_inceptos_himenaeos_cras_interdum_velit_ut_ornare_laoreet_pellentesque_vitae_tortor_ut_tellus_fermentum_venenatis_nec_vel_enim_nulla_eget_eros_facilisis_sollicitudin_turpis_et_ultricies_leo_integer_vitae_facilisis_augue_etiam_vestibulum_commodo_efficitur_integer_ut_ipsum_suscipit_odio_commodo_dictum_quis_vel_massa_pellentesque_vulputate_euismod_odio_eu_congue_sem_vestibulum_quis_pretium_neque_ac_molestie_nibh" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

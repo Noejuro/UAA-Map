@@ -3,4 +3,27 @@
     <string name="title_activity_maps">Map</string>
     <string name="action_favorite">Map</string>
     <string name="action_settings">Map2</string>
+    <string name="title_activity_rectoria_info">RectoriaInfo</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="piso_1_becas_y_deportes">Piso 1: Becas y Deportes</string>
+    <string name="string_piso_1_becas_y_deportes" />
+    <string name="rector_a">Rectoría</string>
+    <string name="qu_puedo_hacer_aqu">¿Qué puedo hacer aquí?</string>
+    <string name="piso_2_cr_ditos_educativos">Piso 2: Créditos Educativos</string>
+    <string name="text">lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_phasellus_ultricies_venenatis_leo_sed_varius_nulla_nisi_risus_lacinia_at_lacinia_at_mollis_id_tortor_proin_ullamcorper_vulputate_nisl_vel_efficitur_arcu_sollicitudin_a_class_aptent_taciti_sociosqu_ad_litora_torquent_per_conubia_nostra_per_inceptos_himenaeos_cras_interdum_velit_ut_ornare_laoreet_pellentesque_vitae</string>
+    <string name="lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_phasellus_ultricies_venenatis_leo_sed_varius_nulla_nisi_risus_lacinia_at_lacinia_at_mollis_id_tortor_proin_ullamcorper_vulputate_nisl_vel_efficitur_arcu_sollicitudin_a_class_aptent_taciti_sociosqu_ad_litora_torquent_per_conubia_nostra_per_inceptos_himenaeos_cras_interdum_velit_ut_ornare_laoreet_pellentesque_vitae_tortor_ut_tellus_fermentum_venenatis_nec_vel_enim_nulla_eget_eros_facilisis_sollicitudin_turpis_et_ultricies_leo_integer_vitae_facilisis_augue_etiam_vestibulum_commodo_efficitur_integer_ut_ipsum_suscipit_odio_commodo_dictum_quis_vel_massa_pellentesque_vulputate_euismod_odio_eu_congue_sem_vestibulum_quis_pretium_neque_ac_molestie_nibh">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies venenatis leo sed varius. Nulla nisi risus, lacinia at lacinia at, mollis id tortor. Proin ullamcorper vulputate nisl, vel efficitur arcu sollicitudin a. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras interdum velit ut ornare laoreet. Pellentesque vitae tortor ut tellus fermentum venenatis nec</string>
+    <string name="piso_3_transparencia">Piso 3: Transparencia</string>
+    <string name="piso_4_programas_acad_micos">Piso 4: Programas Académicos</string>
+    <string name="piso_5_junta_directiva">Piso 5: Junta directiva</string>
+    <string name="piso_6_movilidad">Piso 6: Movilidad</string>
+    <string name="todo">TODO</string>
+
+    <string name="biblioteca">Biblioteca Central</string>
 </resources>

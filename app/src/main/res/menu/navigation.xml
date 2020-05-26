@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/allMarkers"
+        android:icon="@drawable/allmarkers"
+        android:title="Todos"/>
+
+    <item
+        android:id="@+id/navigation_songs"
+        android:icon="@drawable/classroom"
+        android:title="Salones"/>
+
+    <item
+        android:id="@+id/navigation_albums"
+        android:icon="@drawable/admin"
+        android:title="Administrativos"/>
+
+    <item
+        android:id="@+id/navigation_artists"
+        android:icon="@drawable/spoon"
+        android:title="Alimentos"/>
+
+</menu>

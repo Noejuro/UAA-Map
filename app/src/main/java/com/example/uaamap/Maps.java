@@ -2,6 +2,7 @@ package com.example.uaamap;
 
 import androidx.fragment.app.FragmentActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -12,20 +13,27 @@ import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MapStyleOptions;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class Maps extends FragmentActivity implements OnMapReadyCallback {
+public class Maps extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
 
     private GoogleMap mMap;
+    private Marker markerRectoria;
+    private Marker markerBiblio;
+    BottomNavigationView bottomNavigation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+        bottomNavigation = findViewById(R.id.bottom_navigation);
     }
 
 
@@ -83,11 +91,15 @@ public class Maps extends FragmentActivity implements OnMapReadyCallback {
         mMap.addMarker(new MarkerOptions().position(wcBiblioCentral).title("Baños").icon(BitmapDescriptorFactory.fromResource(R.drawable.toilet)));
 
         //Edificios escolares
+        //LatLng rectoria = new LatLng(21.910896, -102.313111);
+        //mMap.addMarker(new MarkerOptions().position(rectoria).title("Rectoría").icon(BitmapDescriptorFactory.fromResource(R.drawable.academic)));
+
         LatLng rectoria = new LatLng(21.910896, -102.313111);
-        mMap.addMarker(new MarkerOptions().position(rectoria).title("Rectoría").icon(BitmapDescriptorFactory.fromResource(R.drawable.academic)));
+        markerRectoria = googleMap.addMarker(new MarkerOptions().position(rectoria).title("Rectoría").icon(BitmapDescriptorFactory.fromResource(R.drawable.academic)));
 
         LatLng BiblioCentral = new LatLng(21.912877, -102.315014);
-        mMap.addMarker(new MarkerOptions().position(BiblioCentral).title("Biblioteca Central").icon(BitmapDescriptorFactory.fromResource(R.drawable.library)));
+        //mMap.addMarker(new MarkerOptions().position(BiblioCentral).title("Biblioteca Central").icon(BitmapDescriptorFactory.fromResource(R.drawable.library)));
+        markerBiblio = googleMap.addMarker(new MarkerOptions().position(BiblioCentral).title("Biblioteca Central").icon(BitmapDescriptorFactory.fromResource(R.drawable.library)));
 
         LatLng auditorioPedroDeAlba = new LatLng(21.912796, -102.315431);
         mMap.addMarker(new MarkerOptions().position(auditorioPedroDeAlba).title("Auditorio Universitario Dr. Pedro de Alba").icon(BitmapDescriptorFactory.fromResource(R.drawable.audience)));
@@ -100,5 +112,29 @@ public class Maps extends FragmentActivity implements OnMapReadyCallback {
         LatLng cafeteria47 = new LatLng(21.913218, -102.317690);
         mMap.addMarker(new MarkerOptions().position(cafeteria47).title("Cafetería").icon(BitmapDescriptorFactory.fromResource(R.drawable.restaurant)));
 
+        //Eventos
+        LatLng event = new LatLng(21.914097, -102.314687);
+        mMap.addMarker(new MarkerOptions().position(event).title("Feria Nacional del Libro").icon(BitmapDescriptorFactory.fromResource(R.drawable.eventsuaa)));
+
+
+        googleMap.setOnMarkerClickListener(this);
+
+    }
+
+    @Override
+    public boolean onMarkerClick(Marker marker) {
+        final Intent rectoInfo = new Intent(getApplicationContext(), RectoriaInfo.class);
+        final Intent biblioInfo = new Intent(getApplicationContext(), infoB.class);
+        if(marker.equals(markerRectoria))
+        {
+            startActivity(rectoInfo);
+        }
+
+        if(marker.equals(markerBiblio))
+        {
+            startActivity(biblioInfo);
+        }
+
+        return false;
     }
 }
