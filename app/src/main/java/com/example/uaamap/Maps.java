@@ -1,9 +1,11 @@
 package com.example.uaamap;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -17,11 +19,15 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.util.ArrayList;
+
 public class Maps extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
 
     private GoogleMap mMap;
-    private Marker markerRectoria;
-    private Marker markerBiblio;
+    public Marker markerRectoria, markerBiblio, markerAuditorioPedroDeAlba;
+    public Marker ed54, ed55, ed53, ed47;
+    public Marker exp58, cafe47;
+    public Marker jardinGen, wc58, wcBiblio, event;
     BottomNavigationView bottomNavigation;
 
     @Override
@@ -34,6 +40,88 @@ public class Maps extends FragmentActivity implements OnMapReadyCallback, Google
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
         bottomNavigation = findViewById(R.id.bottom_navigation);
+
+        bottomNavigation.setOnNavigationItemSelectedListener(new
+         BottomNavigationView.OnNavigationItemSelectedListener() {
+             @Override
+             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                 switch (item.getItemId()) {
+                     case R.id.allMarkers:
+                         ed54.setVisible(true);
+                         ed55.setVisible(true);
+                         ed53.setVisible(true);
+                         ed47.setVisible(true);
+                         markerRectoria.setVisible(true);
+                         markerAuditorioPedroDeAlba.setVisible(true);
+                         markerBiblio.setVisible(true);
+                         exp58.setVisible(true);
+                         cafe47.setVisible(true);
+                         jardinGen.setVisible(true);
+                         wc58.setVisible(true);
+                         wcBiblio.setVisible(true);
+                         event.setVisible(true);
+
+                         break;
+
+                     case R.id.classroom:
+                         ed54.setVisible(true);
+                         ed55.setVisible(true);
+                         ed53.setVisible(true);
+                         ed47.setVisible(true);
+                         markerRectoria.setVisible(false);
+                         markerAuditorioPedroDeAlba.setVisible(false);
+                         markerBiblio.setVisible(false);
+                         exp58.setVisible(false);
+                         cafe47.setVisible(false);
+
+                         jardinGen.setVisible(false);
+                         wc58.setVisible(false);
+                         wcBiblio.setVisible(false);
+                         event.setVisible(false);
+                         break;
+
+                     case R.id.admin:
+                         markerRectoria.setVisible(true);
+                         markerAuditorioPedroDeAlba.setVisible(true);
+                         markerBiblio.setVisible(true);
+                         ed54.setVisible(false);
+                         ed55.setVisible(false);
+                         ed53.setVisible(false);
+                         ed47.setVisible(false);
+                         exp58.setVisible(false);
+                         cafe47.setVisible(false);
+
+
+                         jardinGen.setVisible(false);
+                         wc58.setVisible(false);
+                         wcBiblio.setVisible(false);
+                         event.setVisible(false);
+                         break;
+
+                     case R.id.alimentos:
+                         exp58.setVisible(true);
+                         cafe47.setVisible(true);
+                         ed54.setVisible(false);
+                         ed55.setVisible(false);
+                         ed53.setVisible(false);
+                         ed47.setVisible(false);
+                         markerRectoria.setVisible(false);
+                         markerAuditorioPedroDeAlba.setVisible(false);
+                         markerBiblio.setVisible(false);
+
+                         jardinGen.setVisible(false);
+                         wc58.setVisible(false);
+                         wcBiblio.setVisible(false);
+                         event.setVisible(false);
+                         break;
+                 }
+                 return true;
+             }
+         });
+
+
+
     }
 
 
@@ -56,8 +144,6 @@ public class Maps extends FragmentActivity implements OnMapReadyCallback, Google
 
         mMap.getUiSettings().setMapToolbarEnabled(false);
 
-
-
         MapStyleOptions mapStyleOptions=MapStyleOptions.loadRawResourceStyle(this,R.raw.google_style);
         googleMap.setMapStyle(mapStyleOptions);
 
@@ -67,54 +153,41 @@ public class Maps extends FragmentActivity implements OnMapReadyCallback, Google
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(currentPosition, 18));
 
         //EDIFCIOS SALON
-        LatLng ed54 = new LatLng(21.913617, -102.316332);
-        mMap.addMarker(new MarkerOptions().position(ed54).title("Salón de clases").icon(BitmapDescriptorFactory.fromResource(R.drawable.ed54)));
+        //Marker ed54 = mMap.addMarker(new MarkerOptions().position(new LatLng(21.913617, -102.316332)).title("Salon de clases"));
+        //mMap.addMarker(ed54);
 
-        LatLng ed55 = new LatLng(21.913090, -102.316059);
-        mMap.addMarker(new MarkerOptions().position(ed55).title("Edificio de redes, tienda y salones de computo").icon(BitmapDescriptorFactory.fromResource(R.drawable.ed55)));
+        ed54 = mMap.addMarker(new MarkerOptions().position(new LatLng(21.913617, -102.316332)).title("Salón de clases").icon(BitmapDescriptorFactory.fromResource(R.drawable.ed54)));
 
-        LatLng ed53 = new LatLng(21.913211, -102.316522);
-        mMap.addMarker(new MarkerOptions().position(ed53).title("Salón de clases").icon(BitmapDescriptorFactory.fromResource(R.drawable.ed53)));
+        ed55 = mMap.addMarker(new MarkerOptions().position(new LatLng(21.913090, -102.316059)).title("Edificio de redes, tienda y salones de computo").icon(BitmapDescriptorFactory.fromResource(R.drawable.ed55)));
 
-        LatLng ed47 = new LatLng(21.913331, -102.317733);
-        mMap.addMarker(new MarkerOptions().position(ed47).icon(BitmapDescriptorFactory.fromResource(R.drawable.ed47)));
+        ed53 = mMap.addMarker(new MarkerOptions().position(new LatLng(21.913211, -102.316522)).title("Salón de clases").icon(BitmapDescriptorFactory.fromResource(R.drawable.ed53)));
+
+        ed47 = mMap.addMarker(new MarkerOptions().position(new LatLng(21.913331, -102.317733)).icon(BitmapDescriptorFactory.fromResource(R.drawable.ed47)));
 
         //ESPACIOS RECREATIVOS
-        LatLng espJardinGeneraciones = new LatLng(21.913873, -102.315609);
-        mMap.addMarker(new MarkerOptions().position(espJardinGeneraciones).title("Jardin de las generaciones").icon(BitmapDescriptorFactory.fromResource(R.drawable.greenzone)));
+        jardinGen = mMap.addMarker(new MarkerOptions().position(new LatLng(21.913873, -102.315609)).title("Jardin de las generaciones").icon(BitmapDescriptorFactory.fromResource(R.drawable.greenzone)));
 
         //Baños
-        LatLng wc58 = new LatLng(21.912693, -102.316508);
-        mMap.addMarker(new MarkerOptions().position(wc58).title("Baños").icon(BitmapDescriptorFactory.fromResource(R.drawable.toilet)));
+        wc58 = mMap.addMarker(new MarkerOptions().position(new LatLng(21.912693, -102.316508)).title("Baños").icon(BitmapDescriptorFactory.fromResource(R.drawable.toilet)));
 
-        LatLng wcBiblioCentral = new LatLng(21.912893, -102.315310);
-        mMap.addMarker(new MarkerOptions().position(wcBiblioCentral).title("Baños").icon(BitmapDescriptorFactory.fromResource(R.drawable.toilet)));
+        wcBiblio = mMap.addMarker(new MarkerOptions().position(new LatLng(21.912893, -102.315310)).title("Baños").icon(BitmapDescriptorFactory.fromResource(R.drawable.toilet)));
 
         //Edificios escolares
-        //LatLng rectoria = new LatLng(21.910896, -102.313111);
-        //mMap.addMarker(new MarkerOptions().position(rectoria).title("Rectoría").icon(BitmapDescriptorFactory.fromResource(R.drawable.academic)));
 
-        LatLng rectoria = new LatLng(21.910896, -102.313111);
-        markerRectoria = googleMap.addMarker(new MarkerOptions().position(rectoria).title("Rectoría").icon(BitmapDescriptorFactory.fromResource(R.drawable.academic)));
+        markerRectoria = googleMap.addMarker(new MarkerOptions().position(new LatLng(21.910896, -102.313111)).title("Rectoría").icon(BitmapDescriptorFactory.fromResource(R.drawable.academic)));
 
-        LatLng BiblioCentral = new LatLng(21.912877, -102.315014);
-        //mMap.addMarker(new MarkerOptions().position(BiblioCentral).title("Biblioteca Central").icon(BitmapDescriptorFactory.fromResource(R.drawable.library)));
-        markerBiblio = googleMap.addMarker(new MarkerOptions().position(BiblioCentral).title("Biblioteca Central").icon(BitmapDescriptorFactory.fromResource(R.drawable.library)));
+        markerBiblio = googleMap.addMarker(new MarkerOptions().position(new LatLng(21.912877, -102.315014)).title("Biblioteca Central").icon(BitmapDescriptorFactory.fromResource(R.drawable.library)));
 
-        LatLng auditorioPedroDeAlba = new LatLng(21.912796, -102.315431);
-        mMap.addMarker(new MarkerOptions().position(auditorioPedroDeAlba).title("Auditorio Universitario Dr. Pedro de Alba").icon(BitmapDescriptorFactory.fromResource(R.drawable.audience)));
+        markerAuditorioPedroDeAlba = mMap.addMarker(new MarkerOptions().position(new LatLng(21.912796, -102.315431)).title("Auditorio Universitario Dr. Pedro de Alba").icon(BitmapDescriptorFactory.fromResource(R.drawable.audience)));
 
         //Maquinas expendedoras
-        LatLng vendingM58 = new LatLng(21.912735, -102.316536);
-        mMap.addMarker(new MarkerOptions().position(vendingM58).title("Máquina expendedora").icon(BitmapDescriptorFactory.fromResource(R.drawable.vending_machine)));
+        exp58 = mMap.addMarker(new MarkerOptions().position(new LatLng(21.912735, -102.316536)).title("Máquina expendedora").icon(BitmapDescriptorFactory.fromResource(R.drawable.vending_machine)));
 
         //Cafeterias
-        LatLng cafeteria47 = new LatLng(21.913218, -102.317690);
-        mMap.addMarker(new MarkerOptions().position(cafeteria47).title("Cafetería").icon(BitmapDescriptorFactory.fromResource(R.drawable.restaurant)));
+        cafe47 = mMap.addMarker(new MarkerOptions().position(new LatLng(21.913218, -102.317690)).title("Cafetería").icon(BitmapDescriptorFactory.fromResource(R.drawable.restaurant)));
 
         //Eventos
-        LatLng event = new LatLng(21.914097, -102.314687);
-        mMap.addMarker(new MarkerOptions().position(event).title("Feria Nacional del Libro").icon(BitmapDescriptorFactory.fromResource(R.drawable.eventsuaa)));
+        event = mMap.addMarker(new MarkerOptions().position(new LatLng(21.914097, -102.314687)).title("Feria Nacional del Libro").icon(BitmapDescriptorFactory.fromResource(R.drawable.eventsuaa)));
 
 
         googleMap.setOnMarkerClickListener(this);

@@ -7,17 +7,17 @@
         android:title="Todos"/>
 
     <item
-        android:id="@+id/navigation_songs"
+        android:id="@+id/classroom"
         android:icon="@drawable/classroom"
         android:title="Salones"/>
 
     <item
-        android:id="@+id/navigation_albums"
+        android:id="@+id/admin"
         android:icon="@drawable/admin"
         android:title="Administrativos"/>
 
     <item
-        android:id="@+id/navigation_artists"
+        android:id="@+id/alimentos"
         android:icon="@drawable/spoon"
         android:title="Alimentos"/>
 
