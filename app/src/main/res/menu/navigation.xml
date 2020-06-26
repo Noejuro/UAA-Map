@@ -21,4 +21,9 @@
         android:icon="@drawable/spoon"
         android:title="Alimentos"/>
 
+    <item
+        android:id="@+id/wc"
+        android:icon="@drawable/wc"
+        android:title="Baños"/>
+
 </menu>
